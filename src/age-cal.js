@@ -11,6 +11,12 @@ export class AgeCalculator{
       "Mars": 1.88,
       "Jupiter": 11.86
     };
+    this.planetAge = {
+      "Mercury" = this.calculatePlanetAge("Mercury");
+      "Venus" = this.calculatePlanetAge("Venus");
+      "Mars" = this.calculatePlanetAge("Mars");
+      "Jupiter" = this.calculatePlanetAge("Jupiter");
+    }
 
   }
 
@@ -23,12 +29,18 @@ export class AgeCalculator{
   }
 
   calculatePlanetAge(planet){
+    this.calculateEarthAge();
     const galacticAge = this.age / this.planets[planet];
     console.log(galacticAge);
     return Math.round(galacticAge * 100)/ 100;
   }
 
+  // getEarthLifeSpan(){
+  //   
+  // }
+
   // yearsLeft(planet){
+  //   this.age
   //
   // }
 }

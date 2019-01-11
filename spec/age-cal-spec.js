@@ -25,17 +25,14 @@ describe('AgeCalculator', function() {
   });
 
   it('should calculate current age of user for selected planet', function() {
-    testCalculator.calculateEarthAge();
+    //testCalculator.calculateEarthAge();
     expect(testCalculator.calculatePlanetAge("Mercury")).toEqual(3.79);
     expect(testCalculator.calculatePlanetAge("Venus")).toEqual(1.47);
     expect(testCalculator.calculatePlanetAge("Mars")).toEqual(0.48);
     expect(testCalculator.calculatePlanetAge("Jupiter")).toEqual(0.08);
   });
 
-  it('should calculate current age of user for selected planet', function() {
-    testCalculator.calculateEarthAge();
-    const galacticAge = testCalculator.calculatePlanetAge("Mercury");
-    expect(galacticAge).toEqual(3.79);
-
+  it('should calculate life expectancy for user on Earth based on user info', function() {
+     expect(testCalculator.calculateEarthLifeSpan()).toEqual(95);
   });
 });
