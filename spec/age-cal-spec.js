@@ -37,5 +37,13 @@ describe('AgeCalculator', function() {
      expect(testCalculator1.calculateEarthLifeSpan()).toEqual(69);
   });
 
+  it('should calculate life expectancy for user on selected planet', function() {
+    let testCalculator1 = new AgeCalculator("1985-3-5", "F", "Medium", "United States");
+     expect(testCalculator1.calculatePlanetLifeSpan("Mercury")).toEqual(75);
+     expect(testCalculator.calculatePlanetLifeSpan("Venus")).toEqual(65);
+     expect(testCalculator.calculatePlanetLifeSpan("Mars")).toEqual(36);
+     expect(testCalculator.calculatePlanetLifeSpan("Jupiter")).toEqual(25);
+  });
+
 
 });

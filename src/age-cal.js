@@ -82,7 +82,7 @@ export class AgeCalculator{
      return this.earthLife;
   }
 
-  // yearsLeft(planet){
+  // calculatePlanetLifeSpan(planet){
   //   this.age
   //
   // }
