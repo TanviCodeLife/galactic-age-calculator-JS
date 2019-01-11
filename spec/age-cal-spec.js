@@ -20,6 +20,13 @@ describe('AgeCalculator', function() {
   });
 
   it('should calculate current age of user on Earth', function() {
-    expect(testCalculator.calculateEarthAge()).toEqual(0.904);
+    testCalculator.calculateEarthAge();
+    expect(testCalculator.age).toEqual(0.91);
+  });
+
+  it('should calculate current age of user for selected planet', function() {
+    testCalculator.calculateEarthAge();
+    const galacticAge = testCalculator.calculatePlanetAge();
+    expect(galacticAge).toEqual();
   });
 });
