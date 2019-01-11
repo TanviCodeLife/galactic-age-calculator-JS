@@ -17,14 +17,14 @@ This document will outline a method that can save an Image to a MySql database a
   5. [Test5](#displaying-images-on-the-dom)
 
   ---
-## Specs
+## Test Specs
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-| Generate Single Card | Back Of Card Visible and Clickable | Card should Reveal color |
-| Generate 3 cards | Back Of of each is Card Visible and Clickable | Each card should reveal color |
-| Duplicate the cards to have 2 sets of 5 cards (total 10 cards) | 10 cards should appear |  Each card should have a duplicate in the DOM|
-| Generate Grid of Cards | Start Game | Grid of cards should appear |
+|  Program takes a user's age in Earth years and converts to Mercury Years.| 33 Earth Yrs | 33 / 11.86 = Mercury Yrs
+| Program takes a user's age in Earth years and converts to Venus Years. | 33 Earth Yrs | 33 / 11.86 = = 3.23 Venus Yrs |
+| Program takes a user's age in Earth years and converts to Mars Years. |  33 Earth Yrs  | 33 / 11.86 = 17.55 Mars Yrs |
+| Program takes a user's age in Earth years and converts to Mars Years. |  33 Earth Yrs  | 33 / 11.86 = 2.782 Mars Years |
 | On click event on a card, display card contents | flip any card | card should flip and reveal color |
 | On click event on a second card | flip another card | second card should flip and reveal color |
 | Check for match on the first and the second flip, If same color appear keep them open| second click on another card should flip it | If the first and the second card flip match, keep cards open |
