@@ -1,9 +1,17 @@
 import { AgeCalculator } from './../src/age-cal.js';
 
-describe('Character', function() {
+describe('AgeCalculator', function() {
 
-  it('should create Test class with test prperty', function() {
-    let newTest = new Test(1);
-    expect(newTest.test).toEqual(1);
+  let testCalculator;
+
+  beforeEach(function(){
+    testCalculator = new AgeCalculator("2018-2-15", "f");
+  });
+
+  it('should create testCalculator class with date of birth and gender', function() {
+    expect(testCalculator.dob.getUTCDate()).toEqual(15);
+    expect(testCalculator.dob.getUTCMonth()).toEqual(1);
+    expect(testCalculator.dob.getUTCFullYear()).toEqual(2018);
+    expect(testCalculator.gender).toEqual("f");
   });
 });
