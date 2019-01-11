@@ -10,18 +10,18 @@ This document will outline a method that can save an Image to a MySql database a
 
 
 ## Table of Contents
-  1. [Test1](#sql-database)
-  2. [Test2](#collecting-an-upload)
-  3. [Test3](#creating-a-database-entry)
-  4. [Test4](#returning-images-from-the-database)
-  5. [Test5](#displaying-images-on-the-dom)
+  1. [Test1](#)
+  2. [Test2](#)
+  3. [Test3](#)
+  4. [Test4](#)
+  5. [Test5](#)
 
   ---
 ## Test Specs
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-|  Program takes a user's date of birth and calculate Earth years.| Year: 1985, Month: 2, Date: 3 | 33 Earth years
+|  Program takes a user's date of birth and calculate Earth years.| Year: 1985, Month: 3, Date: 5 | 33.85 Earth years
 |  Program takes a user's age in Earth years and converts to Mercury Years.| 33 Earth Yrs | 33 / .24 = 137.5 Mercury Yrs
 | Program takes a user's age in Earth years and converts to Venus Years. | 33 Earth Yrs | 33 / .62 = = 53.23 Venus Yrs |
 | Program takes a user's age in Earth years and converts to Mars Years. |  33 Earth Yrs  | 33 / 1.88 = 17.55 Mars Yrs |
