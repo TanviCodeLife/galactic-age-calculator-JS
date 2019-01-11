@@ -14,15 +14,6 @@ export class AgeCalculator{
       "Mars": 1.88,
       "Jupiter": 11.86
     };
-    // this.planetAge = {
-    //   "Mercury" = this.calculatePlanetAge("Mercury"),
-    //   "Venus" = this.calculatePlanetAge("Venus"),
-    //   "Mars" = this.calculatePlanetAge("Mars"),
-    //   "Jupiter" = this.calculatePlanetAge("Jupiter"),
-    // };
-    // this.planetLife = {
-    //   "Earth": this.calculateEarthLifeSpan()
-    // };
   }
 
   calculateEarthAge(){
@@ -36,7 +27,6 @@ export class AgeCalculator{
   calculatePlanetAge(planet){
     this.calculateEarthAge();
     const galacticAge = this.age / this.planets[planet];
-    //console.log(galacticAge);
     return Math.round(galacticAge * 100)/ 100;
   }
 
@@ -79,11 +69,18 @@ export class AgeCalculator{
         this.earthLife -= 30;
         break;
     }
+    console.log(this.earthLife);
      return this.earthLife;
   }
 
-  // calculatePlanetLifeSpan(planet){
-  //   this.age
-  //
-  // }
+  calculatePlanetLifeSpan(planet){
+    const planetLife = Math.round( this.earthLife / this.planets[planet]);
+    return planetLife;
+  }
+
+  calculateYearsDiff(planet){
+    const yearsDiff = this.calculatePlanetAge(planet) - calculatePlanetLifeSpan(planet);
+    let message = (yearsDiff > 0) ? `Years Over: ${yearsDiff}` :
+    `Remaining Years: ${Math.abs(yearsDiff)}`
+  }
 }

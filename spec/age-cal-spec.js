@@ -20,30 +20,40 @@ describe('AgeCalculator', function() {
   });
 
   it('should calculate current age of user on Earth', function() {
-    testCalculator.calculateEarthAge();
-    expect(testCalculator.age).toEqual(0.91);
+    let testCalculator1 = new AgeCalculator("1985-3-5", "F", "Medium", "United States");
+    testCalculator1.calculateEarthAge();
+    expect(testCalculator1.age).toEqual(33.86);
   });
 
   it('should calculate current age of user for selected planet', function() {
-    //testCalculator.calculateEarthAge();
-    expect(testCalculator.calculatePlanetAge("Mercury")).toEqual(3.79);
-    expect(testCalculator.calculatePlanetAge("Venus")).toEqual(1.47);
-    expect(testCalculator.calculatePlanetAge("Mars")).toEqual(0.48);
-    expect(testCalculator.calculatePlanetAge("Jupiter")).toEqual(0.08);
+    let testCalculator1 = new AgeCalculator("1985-3-5", "F", "Medium", "United States");
+    expect(testCalculator1.calculatePlanetAge("Mercury")).toEqual(141.08);
+    expect(testCalculator1.calculatePlanetAge("Venus")).toEqual(54.61);
+    expect(testCalculator1.calculatePlanetAge("Mars")).toEqual(18.01);
+    expect(testCalculator1.calculatePlanetAge("Jupiter")).toEqual(2.85);
   });
 
   it('should calculate life expectancy for user on Earth based on user info', function() {
     let testCalculator1 = new AgeCalculator("1985-3-5", "F", "Medium", "United States");
-     expect(testCalculator1.calculateEarthLifeSpan()).toEqual(69);
+    expect(testCalculator1.calculateEarthLifeSpan()).toEqual(69);
   });
 
   it('should calculate life expectancy for user on selected planet', function() {
     let testCalculator1 = new AgeCalculator("1985-3-5", "F", "Medium", "United States");
-     expect(testCalculator1.calculatePlanetLifeSpan("Mercury")).toEqual(75);
-     expect(testCalculator.calculatePlanetLifeSpan("Venus")).toEqual(65);
-     expect(testCalculator.calculatePlanetLifeSpan("Mars")).toEqual(36);
-     expect(testCalculator.calculatePlanetLifeSpan("Jupiter")).toEqual(25);
+    testCalculator1.calculateEarthLifeSpan();
+    expect(testCalculator1.calculatePlanetLifeSpan("Mercury")).toEqual(288);
+    expect(testCalculator1.calculatePlanetLifeSpan("Venus")).toEqual(111);
+    expect(testCalculator1.calculatePlanetLifeSpan("Mars")).toEqual(37);
+    expect(testCalculator1.calculatePlanetLifeSpan("Jupiter")).toEqual(6);
   });
 
+  it('should calculate age is exceeding life expectancy or not', function() {
+    let testCalculator1 = new AgeCalculator("1985-3-5", "F", "Medium", "United States");
+    testCalculator1.calculateEarthLifeSpan();
+    expect(testCalculator1.calculateYearsDiff("Mercury")).toEqual(288);
+    expect(testCalculator1.calculateYearsDiff("Venus")).toEqual(111);
+    expect(testCalculator1.calculateYearsDiff("Mars")).toEqual(37);
+    expect(testCalculator1.calculateYearsDiff("Jupiter")).toEqual(6);
+  });
 
 });
