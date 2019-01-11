@@ -5,7 +5,7 @@ describe('AgeCalculator', function() {
   let testCalculator;
 
   beforeEach(function(){
-    testCalculator = new AgeCalculator("2018-2-15", "f");
+    testCalculator = new AgeCalculator("2018-2-15", "F");
   });
 
   it('should create testCalculator class with date of birth and gender', function() {
@@ -15,7 +15,7 @@ describe('AgeCalculator', function() {
     expect(testCalculator.current.getUTCDate()).toEqual(11);
     expect(testCalculator.current.getUTCMonth()).toEqual(0);
     expect(testCalculator.current.getUTCFullYear()).toEqual(2019);
-    expect(testCalculator.gender).toEqual("f");
+    expect(testCalculator.gender).toEqual("F");
     expect(testCalculator.planets["Earth"]).toEqual(1);
   });
 
@@ -33,6 +33,9 @@ describe('AgeCalculator', function() {
   });
 
   it('should calculate life expectancy for user on Earth based on user info', function() {
-     expect(testCalculator.calculateEarthLifeSpan()).toEqual(95);
+    let testCalculator1 = new AgeCalculator("1985-3-5", "F", "Medium", "United States");
+     expect(testCalculator1.calculateEarthLifeSpan()).toEqual(69);
   });
+
+
 });
