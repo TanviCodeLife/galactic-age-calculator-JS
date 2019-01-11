@@ -1,9 +1,11 @@
 export class AgeCalculator{
-  constructor(dateOfBirth, gender){
+  constructor(dateOfBirth, gender, activity, country){
     this.dob = new Date(dateOfBirth);
     this.current = new Date();
     this.age = 0;
     this.gender = gender;
+    this.activity = activity;
+    this.country = country;
     this.planets = {
       "Earth": 1,
       "Mercury": 0.24,
@@ -12,12 +14,14 @@ export class AgeCalculator{
       "Jupiter": 11.86
     };
     this.planetAge = {
-      "Mercury" = this.calculatePlanetAge("Mercury");
-      "Venus" = this.calculatePlanetAge("Venus");
-      "Mars" = this.calculatePlanetAge("Mars");
-      "Jupiter" = this.calculatePlanetAge("Jupiter");
-    }
-
+      "Mercury" = this.calculatePlanetAge("Mercury"),
+      "Venus" = this.calculatePlanetAge("Venus"),
+      "Mars" = this.calculatePlanetAge("Mars"),
+      "Jupiter" = this.calculatePlanetAge("Jupiter"),
+    };
+    this.planetLife = {
+      "Earth": getEarthLifeSpan()
+    };
   }
 
   calculateEarthAge(){
@@ -35,9 +39,9 @@ export class AgeCalculator{
     return Math.round(galacticAge * 100)/ 100;
   }
 
-  // getEarthLifeSpan(){
-  //   
-  // }
+  getEarthLifeSpan(){
+
+  }
 
   // yearsLeft(planet){
   //   this.age
