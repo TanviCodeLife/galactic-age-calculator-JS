@@ -16,7 +16,7 @@ describe('AgeCalculator', function() {
     expect(testCalculator.current.getUTCMonth()).toEqual(0);
     expect(testCalculator.current.getUTCFullYear()).toEqual(2019);
     expect(testCalculator.gender).toEqual("f");
-    expect(testCalculator.planetsExpect["Earth"]).toEqual(1);
+    expect(testCalculator.planets["Earth"]).toEqual(1);
   });
 
   it('should calculate current age of user on Earth', function() {
@@ -26,7 +26,16 @@ describe('AgeCalculator', function() {
 
   it('should calculate current age of user for selected planet', function() {
     testCalculator.calculateEarthAge();
-    const galacticAge = testCalculator.calculatePlanetAge();
-    expect(galacticAge).toEqual();
+    expect(testCalculator.calculatePlanetAge("Mercury")).toEqual(3.79);
+    expect(testCalculator.calculatePlanetAge("Venus")).toEqual(1.47);
+    expect(testCalculator.calculatePlanetAge("Mars")).toEqual(0.48);
+    expect(testCalculator.calculatePlanetAge("Jupiter")).toEqual(0.08);
+  });
+
+  it('should calculate current age of user for selected planet', function() {
+    testCalculator.calculateEarthAge();
+    const galacticAge = testCalculator.calculatePlanetAge("Mercury");
+    expect(galacticAge).toEqual(3.79);
+
   });
 });

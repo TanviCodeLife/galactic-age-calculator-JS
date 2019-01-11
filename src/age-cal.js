@@ -4,7 +4,7 @@ export class AgeCalculator{
     this.current = new Date();
     this.age = 0;
     this.gender = gender;
-    this.planetsExpect = {
+    this.planets = {
       "Earth": 1,
       "Mercury": 0.24,
       "Venus": 0.62,
@@ -19,9 +19,16 @@ export class AgeCalculator{
     const timeNow = Date.now();
     let diffInAge = (timeNow - Date.parse(this.dob)) / convertFactor;
     this.age = Math.round(diffInAge * 100)/ 100;
+    console.log(this.age);
   }
 
-  // calculatePlanetAge(){
+  calculatePlanetAge(planet){
+    const galacticAge = this.age / this.planets[planet];
+    console.log(galacticAge);
+    return Math.round(galacticAge * 100)/ 100;
+  }
+
+  // yearsLeft(planet){
   //
   // }
 }
