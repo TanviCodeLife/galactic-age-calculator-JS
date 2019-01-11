@@ -1,8 +1,9 @@
 export class AgeCalculator{
   constructor(dateOfBirth, gender){
     this.dob = new Date(dateOfBirth);
+    this.current = new Date();
     this.gender = gender;
-    this.planets = {
+    this.planetsExpect = {
       "Earth": 1,
       "Mercury": 0.24,
       "Venus": 0.62,
@@ -10,7 +11,7 @@ export class AgeCalculator{
       "Jupiter": 11.86
     };
 
-    // convertDateFormat(){
+    // calculateEarthAge(){
     //
     // }
 
