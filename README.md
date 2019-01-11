@@ -21,16 +21,13 @@ This document will outline a method that can save an Image to a MySql database a
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-|  Program takes a user's age in Earth years and converts to Mercury Years.| 33 Earth Yrs | 33 / 11.86 = Mercury Yrs
-| Program takes a user's age in Earth years and converts to Venus Years. | 33 Earth Yrs | 33 / 11.86 = = 3.23 Venus Yrs |
-| Program takes a user's age in Earth years and converts to Mars Years. |  33 Earth Yrs  | 33 / 11.86 = 17.55 Mars Yrs |
-| Program takes a user's age in Earth years and converts to Mars Years. |  33 Earth Yrs  | 33 / 11.86 = 2.782 Mars Years |
-| On click event on a card, display card contents | flip any card | card should flip and reveal color |
-| On click event on a second card | flip another card | second card should flip and reveal color |
-| Check for match on the first and the second flip, If same color appear keep them open| second click on another card should flip it | If the first and the second card flip match, keep cards open |
-| Check for match on the first and the second flip, if different pictures appear flip them back to close| second click on another card should flip it | If the first and the second card flip do not match, close the cards|
-| Player should not be able to play further until two flips are compared for a match or a mismatch | third click | 1. If the first and the second card flip do not match, close the cards  2. If the first and the second card flip match, open the cards|
-
+|  Program takes a user's date of birth and calculate Earth years.| Year: 1985, Month: 2, Date: 3 | 33 Earth years
+|  Program takes a user's age in Earth years and converts to Mercury Years.| 33 Earth Yrs | 33 / .24 = 137.5 Mercury Yrs
+| Program takes a user's age in Earth years and converts to Venus Years. | 33 Earth Yrs | 33 / .62 = = 53.23 Venus Yrs |
+| Program takes a user's age in Earth years and converts to Mars Years. |  33 Earth Yrs  | 33 / 1.88 = 17.55 Mars Yrs |
+| Program takes a user's age in Earth years and converts to Jupiter Years. |  33 Earth Yrs  | 33 / 11.86 = 2.78 Jupiter Years |
+| Program takes a user's age in Earth years and gives life expectancy in selected planet's years. |  User Age = 33 Earth Years, User Earth Life Expectancy = 75, User Mars Life Expectancy = 39.89 Mars Years   | Life Expectancy in Mars Years = 22.34 Mars Years |
+| Program takes a user's age and calculates how many years a user has lived longer on a selected planet based on life expectancy. |  User Age = 79 Earth Years, User Earth Life Expectancy = 75, User Mars Life Expectancy = 39.89 Mars Years   | Years past Life Expectancy in Mars = 22.34 Mars Years |
  ---
 
 ## Technologies Used

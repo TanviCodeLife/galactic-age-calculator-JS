@@ -1,4 +1,4 @@
-import { Test } from './../src/age-cal.js';
+import { AgeCalculator } from './../src/age-cal.js';
 
 describe('Character', function() {
 

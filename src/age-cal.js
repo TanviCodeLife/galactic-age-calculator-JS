@@ -1,7 +1,15 @@
-export class Test{
-  constructor(test){
-    this.test = test;
+export class AgeCalculator{
+  constructor(dateOfBirth, gender){
+    this.dob = dateOfBirth;
+    this.gender = gender;
+    this.planets = {
+      "Earth": 1,
+      "Mercury": 0.24,
+      "Venus": 0.62,
+      "Mars": 1.88,
+      "Jupiter": 11.86
+    };
   }
 
-
+cal
 }
