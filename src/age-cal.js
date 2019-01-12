@@ -14,6 +14,7 @@ export class AgeCalculator{
       "Mars": 1.88,
       "Jupiter": 11.86
     };
+    this.message = "";
   }
 
   calculateEarthAge(){
@@ -79,9 +80,17 @@ export class AgeCalculator{
   }
 
   calculateYearsDiff(planet){
-    const yearsDiff = this.calculatePlanetAge(planet) - calculatePlanetLifeSpan(planet);
-    let message = (yearsDiff > 0) ? `Years Over: ${yearsDiff}` :
-    `Remaining Years: ${Math.abs(yearsDiff)}`
+    const yearsDiff = this.calculatePlanetAge(planet) - this.calculatePlanetLifeSpan(planet);
+    const diff = Math.round(yearsDiff * 100) / 100;
+    switch(yearsDiff){
+      case yearsDiff < 0:
+        this.message = `Remaining Years: ${Math.abs(yearsDiff)}`;
+        break;
+      case yearsDiff > 0:
+        this.message = `Years Over: ${diff}`;
+        break;
+    }
+    return this.message;
   }
-  
+
 }
