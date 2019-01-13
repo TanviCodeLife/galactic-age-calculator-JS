@@ -81,16 +81,12 @@ export class AgeCalculator{
 
   calculateYearsDiff(planet){
     const yearsDiff = this.calculatePlanetAge(planet) - this.calculatePlanetLifeSpan(planet);
+    console.log(`yearsDiff ${yearsDiff}`);
     const diff = Math.round(yearsDiff * 100) / 100;
-    switch(yearsDiff){
-      case yearsDiff < 0:
-        this.message = `Remaining Years: ${Math.abs(yearsDiff)}`;
-        break;
-      case yearsDiff > 0:
-        this.message = `Years Over: ${diff}`;
-        break;
-    }
+    console.log(`diff ${diff}`);
+    this.message = (yearsDiff < 0) ? `Remaining Years: ${Math.abs(diff)}` : `Years Over: ${diff}`;
     return this.message;
   }
+
 
 }

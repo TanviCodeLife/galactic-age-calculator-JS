@@ -8,11 +8,11 @@ describe('AgeCalculator', function() {
     testCalculator = new AgeCalculator("1985-3-5", "F", "Medium", "United States");
   });
 
-  it('should create testCalculator class with date of birth and gender', function() {
+  it('should create testCalculator class with date of birth, gender and user specs', function() {
     expect(testCalculator.dob.getDate()).toEqual(5);
     expect(testCalculator.dob.getMonth()).toEqual(2);
     expect(testCalculator.dob.getUTCFullYear()).toEqual(1985);
-    expect(testCalculator.current.getDate()).toEqual(11);
+    expect(testCalculator.current.getDate()).toEqual(12);
     expect(testCalculator.current.getMonth()).toEqual(0);
     expect(testCalculator.current.getUTCFullYear()).toEqual(2019);
     expect(testCalculator.gender).toEqual("F");
