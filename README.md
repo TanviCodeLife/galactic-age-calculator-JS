@@ -7,12 +7,13 @@ An application that determines a user’s age, lifespan and years left to live b
 
 ## Table of Contents
   1. [Specifications](#specs-work)
+  2. [Setup on OSX](#setup)
   2. [Technologies Used](#Tech-used)
   3. [Configuration/dependencies](#config-dep)
   4. [MIT License](#mit-lic)
 
   ---
-## Specifications
+## Specifications <a name="specs-work"></a>
 
 | Behavior | Input | Output |
 |----------|-------|--------|
@@ -25,7 +26,7 @@ An application that determines a user’s age, lifespan and years left to live b
 | Program takes a user's date of birth and calculates how many years a user has lived longer on a selected planet based on life expectancy. |  User Age = 79 Earth Years, User Earth Life Expectancy = 75, User Mars Life Expectancy = 39.89 Mars Years   | Years past Life Expectancy in Mars = 22.34 Mars Years |
 | Program takes a user's age and calculates how many years a user has lived longer on a selected planet based on life expectancy. |  User Age = 79 Earth Years, User Earth Life Expectancy = 75, User Mars Life Expectancy = 39.89 Mars Years   | Years past Life Expectancy in Mars = 22.34 Mars Years |
  ---
-## Setup on OSX
+## Setup on OSX <a name="setup"></a>
 
 * Install Node.js
 * Install karma-cli globally: `npm install -g karma-cli`
@@ -36,7 +37,7 @@ An application that determines a user’s age, lifespan and years left to live b
 * `npm test` to run the unit tests with Karma and Jasmine. Visit `localhost:9876` to view the tests.
 
  ---
-## Technologies Used
+## Technologies Used <a name="Tech-used"></a>
 
 * JavaScript
 * Node.js
@@ -49,7 +50,7 @@ An application that determines a user’s age, lifespan and years left to live b
 * Karma
 
 ---
-## Configuration/Dependencies
+## Configuration/Dependencies <a name="config-dep"></a>
 
   | Dependency                           | Description                                                                |
   | ------------------------------------ | -------------------------------------------------------------------------- |
@@ -77,7 +78,7 @@ An application that determines a user’s age, lifespan and years left to live b
   | webpack-dev-server v. 3.1.0          | Provides live reloading during development                                 |
 
 ---
-## License
+## License <a name="mit-lic"></a>
 
 This software is licensed under the MIT license.
 
