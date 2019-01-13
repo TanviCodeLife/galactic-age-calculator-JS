@@ -30,7 +30,8 @@ An application that determines a user’s age, lifespan and years left to live b
 
 * Install Node.js
 * Install karma-cli globally: `npm install -g karma-cli`
-* Clone the repo
+* Go to GitHub profile and clone the repo from [Super Galactic Age Calculator](https://github.com/TanviCodeLife/galactic-age-calculator-JS.git). Use `git clone <project url>` command to pull it to a local repository in your Home directory.
+*  Navigate to root of project directory
 * `npm install` to install dependencies
 * `npm run start` to build and start the dev server
 * `npm run lint` to explicitly run ESLint
