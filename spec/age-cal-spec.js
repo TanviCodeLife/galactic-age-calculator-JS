@@ -12,7 +12,7 @@ describe('AgeCalculator', function() {
     expect(testCalculator.dob.getDate()).toEqual(5);
     expect(testCalculator.dob.getMonth()).toEqual(2);
     expect(testCalculator.dob.getUTCFullYear()).toEqual(1985);
-    expect(testCalculator.current.getDate()).toEqual(12);
+    expect(testCalculator.current.getDate()).toEqual(14);
     expect(testCalculator.current.getMonth()).toEqual(0);
     expect(testCalculator.current.getUTCFullYear()).toEqual(2019);
     expect(testCalculator.gender).toEqual("F");
@@ -46,19 +46,19 @@ describe('AgeCalculator', function() {
 
   it('should calculate age is less than the life expectancy', function() {
     testCalculator.calculateEarthLifeSpan();
-    expect(testCalculator.calculateYearsDiff("Mercury")).toEqual("Remaining Years: 146.92");
-    expect(testCalculator.calculateYearsDiff("Venus")).toEqual("Remaining Years: 56.39");
-    expect(testCalculator.calculateYearsDiff("Mars")).toEqual("Remaining Years: 18.99");
-    expect(testCalculator.calculateYearsDiff("Jupiter")).toEqual("Remaining Years: 3.15");
+    expect(testCalculator.calculateYearsDiff("Mercury")).toEqual("146.92 Remaining Years");
+    expect(testCalculator.calculateYearsDiff("Venus")).toEqual("56.39 Remaining Years");
+    expect(testCalculator.calculateYearsDiff("Mars")).toEqual("18.99 Remaining Years");
+    expect(testCalculator.calculateYearsDiff("Jupiter")).toEqual("3.15 Remaining Years");
   });
 
   it('should calculate age is more than the life expectancy', function() {
-    let testCalculator1 = new AgeCalculator("1940-1-1", "F", "High", "United States");
+    let testCalculator1 = new AgeCalculator("1930-1-1", "F", "High", "United States");
     testCalculator1.calculateEarthLifeSpan();
-    expect(testCalculator1.calculateYearsDiff("Mercury")).toEqual("Years Over: 0.29");
-    expect(testCalculator1.calculateYearsDiff("Venus")).toEqual("Years Over: 0.47");
-    expect(testCalculator1.calculateYearsDiff("Mars")).toEqual("Years Over: 0.04");
-    expect(testCalculator1.calculateYearsDiff("Jupiter")).toEqual("Years Over: 0.34");
+    expect(testCalculator1.calculateYearsDiff("Mercury")).toEqual("42 Years Over");
+    expect(testCalculator1.calculateYearsDiff("Venus")).toEqual("16.61 Years Over");
+    expect(testCalculator1.calculateYearsDiff("Mars")).toEqual("5.36 Years Over");
+    expect(testCalculator1.calculateYearsDiff("Jupiter")).toEqual("0.51 Years Over");
   });
 
 });

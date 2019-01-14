@@ -75,16 +75,14 @@ export class AgeCalculator{
   }
 
   calculatePlanetLifeSpan(planet){
-    const planetLife = Math.round( this.earthLife / this.planets[planet]);
+    const planetLife = Math.round(this.earthLife / this.planets[planet]);
     return planetLife;
   }
 
   calculateYearsDiff(planet){
     const yearsDiff = this.calculatePlanetAge(planet) - this.calculatePlanetLifeSpan(planet);
-    console.log(`yearsDiff ${yearsDiff}`);
     const diff = Math.round(yearsDiff * 100) / 100;
-    console.log(`diff ${diff}`);
-    this.message = (yearsDiff < 0) ? `Remaining Years: ${Math.abs(diff)}` : `Years Over: ${diff}`;
+    this.message = (yearsDiff < 0) ? `${Math.abs(diff)} Remaining Years` : `${diff} Years Over`;
     return this.message;
   }
 

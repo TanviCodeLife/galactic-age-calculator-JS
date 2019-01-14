@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Template</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Galactic Age Calculator</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <h1 class="display-2">Super Galactic Age Calculator</h1>
+    <h4 class="lead">Curious how long you will live or overlived on a planet in our solar system!<h4>
+    <div class="container">
+      <form id="details-form">
+        <div class="form-group">
+          <label for="addName">Name</label>
+          <input id="addName" class="form-control" type="text" required>
+        </div>
+        <div class='form-group'>
+        <label for="date">Your Date of Birth:</label>
+        <input type="date" id="date" name="date" value="">
+        </div>
+        <div class="form-group">
+          <label for="planet">Planet:</label>
+          <select class="form-control" id="planet">
+            <option value="Mercury">Mercury</option>
+            <option value="Venus">Venus</option>
+            <option value="Mars">Mars</option>
+            <option value="Jupiter">Jupiter</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="country">Country Of Residence:</label>
+          <select class="form-control" id="country">
+            <option value="Sweden">Sweden</option>
+            <option value="United States">United States</option>
+            <option value="China">China</option>
+            <option value="India">India</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="activity">Activity Level:</label>
+          <select class="form-control" id="activity">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="gender1" name="customRadioInline1" class="custom-control-input" value="M">
+          <label class="custom-control-label" for="gender1">Male</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="gender2" name="customRadioInline1" class="custom-control-input" value="F">
+          <label class="custom-control-label" for="gender2">Female</label>
+        </div>
+        <div id="buttonAlign">
+         <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
 
-  </body>
+      <div id="output">
+
+      </div>
+    </div>
+  </div>
+</body>
 </html>

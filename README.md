@@ -2,9 +2,11 @@
 ####  Week1 JavaScript Independent Project at Epicodus, 01/12/2019
 #### Tanvi Garg   
 
+  ---
 ## Description
 An application that determines a user’s age, lifespan and years left to live based on a planet’s solar years.
 
+  ---
 ## Table of Contents
   1. [Specifications](#specs-work)
   2. [Setup on OSX](#setup)
@@ -17,14 +19,18 @@ An application that determines a user’s age, lifespan and years left to live b
 
 | Behavior | Input | Output |
 |----------|-------|--------|
-|  Program takes a user's date of birth and calculate Earth years.| Year: 1985, Month: 3, Date: 5 | 33.85 Earth years
-|  Program takes a user's date of birth and converts to Mercury Years.| 33 Earth Yrs | 33 / .24 = 137.5 Mercury Yrs
-| Program takes a user's date of birth and converts to Venus Years. | 33 Earth Yrs | 33 / .62 = = 53.23 Venus Yrs |
-| Program takes a user's date of birth and converts to Mars Years. |  33 Earth Yrs  | 33 / 1.88 = 17.55 Mars Yrs |
-| Program takes a user's date of birth and converts to Jupiter Years. |  33 Earth Yrs  | 33 / 11.86 = 2.78 Jupiter Years |
-| Program takes a user's date of birth and gives life expectancy in selected planet's years. |  User Age = 33 Earth Years, User Earth Life Expectancy = 75, User Mars Life Expectancy = 39.89 Mars Years   | Life Expectancy in Mars Years = 22.34 Mars Years |
-| Program takes a user's date of birth and calculates how many years a user has lived longer on a selected planet based on life expectancy. |  User Age = 79 Earth Years, User Earth Life Expectancy = 75, User Mars Life Expectancy = 39.89 Mars Years   | Years past Life Expectancy in Mars = 22.34 Mars Years |
-| Program takes a user's age and calculates how many years a user has lived longer on a selected planet based on life expectancy. |  User Age = 79 Earth Years, User Earth Life Expectancy = 75, User Mars Life Expectancy = 39.89 Mars Years   | Years past Life Expectancy in Mars = 22.34 Mars Years |
+|  Program takes a user's date of birth and calculate Earth years.| User DOB= 1985-3-5, Planet: Mercury, Country Of Residence: United States, Activity Level: Medium, Gender: F | 33.86 Earth years |
+|  Program takes a user's date of birth and converts to Mercury Years.| User DOB= 1985-3-5, Planet: Mercury, Country Of Residence: United States, Activity Level: Medium, Gender: F | 33.86 / .24 = 141.08 Mercury Yrs |
+| Program takes a user's date of birth and converts to Venus Years. | User DOB= 1985-3-5, Planet: Venus, Country Of Residence: United States, Activity Level: Medium, Gender: F | 33.86 / .62 = = 54.61 Venus Yrs |
+| Program takes a user's date of birth and converts to Mars Years. |  User DOB= 1985-3-5, Planet: Mars, Country Of Residence: United States, Activity Level: Medium, Gender: F  | 33.86 / 1.88 = 18.01 Mars Yrs |
+| Program takes a user's date of birth and converts to Jupiter Years. |  User DOB= 1985-3-5, Planet: Jupiter, Country Of Residence: United States, Activity Level: Medium, Gender: F  | 33.86 / 11.86 = 2.85 Jupiter Years |
+| Program takes a user's date of birth and gives life expectancy in Earth years based on country, gender and activity level. |  User DOB= 1985-3-5, Country Of Residence: United States, Activity Level: Medium, Gender: F  | Life Expectancy = 69 |
+| Program takes a user's date of birth and gives life expectancy in selected planet's years. |  User DOB= 1985-3-5, Planet: Mercury, Country Of Residence: United States, Activity Level: Medium, Gender: F  | Life Expectancy = 288 Mercury Years |
+| Program takes a user's date of birth and gives life expectancy in selected planet's years. |  User DOB= 1985-3-5, Planet: Venus, Country Of Residence: United States, Activity Level: Medium, Gender: F  | Life Expectancy = 111 Venus Years |
+| Program takes a user's date of birth and gives life expectancy in selected planet's years. |  User DOB= 1985-3-5, Planet: Mars, Country Of Residence: United States, Activity Level: Medium, Gender: F  | Life Expectancy = 37 Mars Years |
+| Program takes a user's date of birth and gives life expectancy in selected planet's years. |  User DOB= 1985-3-5, Planet: Jupiter, Country Of Residence: United States, Activity Level: Medium, Gender: F  | Life Expectancy = 6 Jupiter Years |
+| Program takes a user's date of birth and calculates how many years a user has left to live selected planet based on life expectancy. |  User DOB= 1985-3-5, Planet: Mercury, Country Of Residence: United States, Activity Level: Medium, Gender: F| 146.92  Mercury Years Left to Live |
+| Program takes a user's date of birth and calculates how many years a user has lived longer on a selected planet based on life expectancy. |  User DOB: 1930-1-1, Planet: Mercury, Country Of Residence: United States, Activity Level: High, Gender: F| 42 Mercury Years Over Life Expectancy |
  ---
 ## Setup on OSX <a name="setup"></a>
 
@@ -77,6 +83,8 @@ An application that determines a user’s age, lifespan and years left to live b
   | webpack v. 4.19.1                     | A module bundler used to bundle JavaScript files and additional resources   *Note - Remove carrot sign ^ in version number if webpack issues occur* |
   | webpack-cli v. 2.0.9                 | Use webpack from command line                                              |
   | webpack-dev-server v. 3.1.0          | Provides live reloading during development                                 |
+  | css-loader 0.28.10 and style-loader 0.20.2        | renders images in DOM when `<img>` tag is used  |
+
 
 ---
 ## License <a name="mit-lic"></a>
